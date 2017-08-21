@@ -127,10 +127,31 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MsF-LB-UcI" secondAttribute="bottom" id="wTY-UP-3pp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Cwp-89-9dg" kind="showDetail" identifier="VideoVC" id="jfo-gr-f4i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="YMR-PL-c4D">
+            <objects>
+                <viewController id="Cwp-89-9dg" customClass="VideoVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TdN-c5-Ep6"/>
+                        <viewControllerLayoutGuide type="bottom" id="a26-D3-bda"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6tf-Of-hel">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEO-QR-Taq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="38"/>
         </scene>
     </scenes>
     <resources>
