@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="still time.ttf">
+            <string>StillTime-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -86,10 +91,22 @@
                                                         <constraint firstAttribute="width" constant="68" id="q4z-QC-Wsm"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where the sun goes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hZ-N8-WH9">
+                                                    <rect key="frame" x="84" y="20" width="283" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="49" id="Ho9-ZZ-Qmb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="32"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="kk3-5D-qTR" firstAttribute="leading" secondItem="wDO-qk-gqo" secondAttribute="leadingMargin" id="IXP-1Q-I3y"/>
                                                 <constraint firstItem="kk3-5D-qTR" firstAttribute="centerY" secondItem="wDO-qk-gqo" secondAttribute="centerY" id="Z8I-Ex-6Sx"/>
+                                                <constraint firstItem="6hZ-N8-WH9" firstAttribute="leading" secondItem="kk3-5D-qTR" secondAttribute="trailing" constant="8" id="fl3-Ct-jgE"/>
+                                                <constraint firstItem="6hZ-N8-WH9" firstAttribute="centerY" secondItem="wDO-qk-gqo" secondAttribute="centerY" id="rQA-6D-f8C"/>
+                                                <constraint firstItem="6hZ-N8-WH9" firstAttribute="trailing" secondItem="wDO-qk-gqo" secondAttribute="trailingMargin" id="tkY-Nq-N5s"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
