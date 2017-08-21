@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="174" width="375" height="35"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xdH-co-lhA">
-                                        <rect key="frame" x="8" y="3" width="359" height="36"/>
+                                        <rect key="frame" x="8" y="-1" width="359" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbF-Vj-6RB">
                                                 <rect key="frame" x="0.0" y="0.0" width="119.5" height="36"/>
@@ -59,21 +60,54 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.79800523477157359" green="0.79800523477157359" blue="0.79800523477157359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="xdH-co-lhA" firstAttribute="top" secondItem="p6I-Ce-QGv" secondAttribute="top" constant="3" id="Y1e-6M-Ayg"/>
+                                    <constraint firstItem="xdH-co-lhA" firstAttribute="top" secondItem="p6I-Ce-QGv" secondAttribute="top" constant="-1" id="Y1e-6M-Ayg"/>
                                     <constraint firstItem="xdH-co-lhA" firstAttribute="leading" secondItem="p6I-Ce-QGv" secondAttribute="leading" constant="8" id="bmv-Qb-QF8"/>
                                     <constraint firstAttribute="trailing" secondItem="xdH-co-lhA" secondAttribute="trailing" constant="8" id="gMG-rz-Qet"/>
                                     <constraint firstAttribute="height" constant="35" id="pcP-lK-6NV"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MsF-LB-UcI">
+                                <rect key="frame" x="0.0" y="209" width="375" height="458"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="Gr7-Er-PFV">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gr7-Er-PFV" id="wDO-qk-gqo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="kk3-5D-qTR">
+                                                    <rect key="frame" x="8" y="10" width="68" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="68" id="FQO-o4-CCF"/>
+                                                        <constraint firstAttribute="height" constant="68" id="NYZ-zR-Xvm"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="aHg-Sq-qgb"/>
+                                                        <constraint firstAttribute="width" constant="68" id="q4z-QC-Wsm"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kk3-5D-qTR" firstAttribute="leading" secondItem="wDO-qk-gqo" secondAttribute="leadingMargin" id="IXP-1Q-I3y"/>
+                                                <constraint firstItem="kk3-5D-qTR" firstAttribute="centerY" secondItem="wDO-qk-gqo" secondAttribute="centerY" id="Z8I-Ex-6Sx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="p6I-Ce-QGv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1HJ-3M-hkd"/>
+                            <constraint firstItem="MsF-LB-UcI" firstAttribute="top" secondItem="p6I-Ce-QGv" secondAttribute="bottom" id="5YF-pu-0Kd"/>
                             <constraint firstItem="EuS-a1-inz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5j5-j9-q1c"/>
                             <constraint firstItem="EuS-a1-inz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HhP-WP-mxg"/>
+                            <constraint firstItem="MsF-LB-UcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lu3-ff-c2G"/>
+                            <constraint firstAttribute="trailing" secondItem="MsF-LB-UcI" secondAttribute="trailing" id="WNT-fo-0sp"/>
                             <constraint firstItem="p6I-Ce-QGv" firstAttribute="top" secondItem="EuS-a1-inz" secondAttribute="bottom" id="atd-yH-DkW"/>
                             <constraint firstAttribute="trailing" secondItem="p6I-Ce-QGv" secondAttribute="trailing" id="dcc-HJ-JHv"/>
                             <constraint firstAttribute="trailing" secondItem="EuS-a1-inz" secondAttribute="trailing" id="v1V-2Z-V1K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MsF-LB-UcI" secondAttribute="bottom" id="wTY-UP-3pp"/>
                         </constraints>
                     </view>
                 </viewController>
